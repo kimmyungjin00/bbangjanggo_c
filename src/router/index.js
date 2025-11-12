@@ -19,6 +19,8 @@ import Dashboard_worker from "@/pages/worker/Dashboard_worker.vue";
 import Notice_worker from "@/pages/worker/Notice_worker.vue";
 import Jobs_worker from "@/pages/worker/Jobs_worker.vue";
 import Mypage_worker from "@/pages/worker/Mypage_worker.vue";
+import Signup_worker from "@/pages/worker/Signup_worker.vue";
+import InfoRegister_worker from "@/pages/worker/InfoRegister_worker.vue";
 const routes = [
   // 메인페이지
   { path: "/", component: Home },
@@ -32,6 +34,9 @@ const routes = [
   { path: "/searchPass", component: SearchPassword, meta: { hideFooter: true } },
   // 관리자 및 기사 로그인 페이지
   { path: "/loginworker", component: Login_worker },
+  // 기사 회원가입 및 등록페이지
+  { path: "/signupworker", component: Signup_worker },
+  { path: "/register", component: InfoRegister_worker },
   // 관리자 페이지
   { path: "/admin", component: AdminHome, redirect:"admin/dashboard", children:[
       { path: "dashboard", component: Dashboard_admin },
