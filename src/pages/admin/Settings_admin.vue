@@ -1,12 +1,12 @@
 <template>
-  <div class="space-y-6 bg-white text-black dark:bg-black dark:text-white p-4 rounded">
-    <h1 class="text-3xl font-bold text-gray-800 mb-8">설정</h1>
+  <div class="space-y-6 bg-amber-600 text-amber-900 dark:bg-black dark:text-white p-4 rounded">
+    <h1 class="text-3xl font-bold text-white amber mb-8">설정</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
       <!-- 알림 설정 -->
-      <div class="bg-white rounded-xl shadow-sm text-gray-700 dark:text-gray-300">
-        <div class="bg-indigo-50 p-6 border-b border-gray-200 flex items-center gap-4">
-          <i class="fas fa-bell text-xl text-indigo-600"></i>
-          <h2 class="text-xl font-semibold text-gray-800">알림 설정</h2>
+      <div class="bg-white rounded-xl shadow-sm text-amber-900 dark:text-gray-300">
+        <div class=" text p-6 border-b border-amber-700 flex items-center gap-4">
+          <i class="fas fa-bell text-xl text-amber-900"></i>
+          <h2 class="text-xl font-semibold text-gray-900">알림 설정</h2>
         </div>
         <div class="p-6 space-y-6">
           <div v-for="ntification in notificationSettings" :key="ntification.key"
@@ -25,16 +25,16 @@
         </div>
       </div>
       <!-- 시스템 설정 -->
-      <div class="bg-white rounded-xl shadow-sm text-gray-700 dark:text-gray-300">
-        <div class="bg-green-50 p-6 border-b border-gray-200 flex items-center gap-4">
-          <i class="fas fa-cog text-xl text-green-600"></i>
-          <h2 class="text-xl font-semibold text-gray-800">시스템 설정</h2>
+      <div class="bg-white rounded-xl shadow-sm text-amber-900 dark:text-gray-300">
+        <div class="bg-green-50 p-6 border-b text-amber-90 flex items-center gap-4">
+          <i class="fas fa-cog text-xl text-amber-900"></i>
+          <h2 class="text-xl font-semibold text-gray-900">시스템 설정</h2>
         </div>
         <div class="p-6 space-y-6">
           <div class="flex justify-between items-center">
             <div class="flex-1">
               <h3 class="text-gray-800 font-medium mb-1">자동 저장</h3>
-              <p class="text-sm text-gray-500">변경사항을 자동으로 저장합니다</p>
+              <p class="text-sm text-gray-800">변경사항을 자동으로 저장합니다</p>
             </div>
             <label class="relative inline-flex items-center cursor-pointer ml-4">
               <input type="checkbox" v-model="settings.autoSave" class="sr-only peer" />
@@ -47,20 +47,20 @@
           <div class="border-t pt-6">
             <h3 class="text-gray-800 font-medium mb-3">세션 타임아웃</h3>
             <select v-model="settings.sessionTimeout"
-              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+              class="w-full px-4 py-2 border border-amber-950 rounded-lg focus:ring-2 focus:ring-amber-800 focus:border-amber-800">
               <option value="15">15분</option>
               <option value="30">30분</option>
               <option value="60">1시간</option>
               <option value="120">2시간</option>
             </select>
-            <p class="text-sm text-gray-500 mt-2">일정 시간 동안 활동이 없으면 자동으로 로그아웃됩니다</p>
+            <p class="text-sm text-gray-700 mt-2">일정 시간 동안 활동이 없으면 자동으로 로그아웃됩니다</p>
           </div>
         </div>
       </div>
       <!-- 데이터 관리 -->
-      <div class="bg-white rounded-xl shadow-sm text-gray-700 dark:text-gray-300">
+      <div class="bg-white rounded-xl shadow-sm text-gray-700 dark:text-gray-700">
         <div class="bg-blue-50 p-6 border-b border-gray-200 flex items-center gap-4">
-          <i class="fas fa-database text-xl text-blue-600"></i>
+          <i class="fas fa-database text-xl text--600"></i>
           <h2 class="text-xl font-semibold text-gray-800">데이터 관리</h2>
         </div>
         <div class="p-6 space-y-6">
